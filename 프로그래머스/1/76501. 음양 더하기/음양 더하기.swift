@@ -5,12 +5,7 @@ func solution(_ absolutes:[Int], _ signs:[Bool]) -> Int {
     
     for i in 0..<absolutes.count {
         var absolute = absolutes[i]
-        
-        if signs[i] == true {
-            result += absolute
-        } else {
-            result += -absolute
-        }
+        result += signs[i] == true ? absolute : -absolute
     }
     return result
 }
