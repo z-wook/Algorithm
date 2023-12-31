@@ -1,10 +1,5 @@
 let n = Int(readLine()!)!
 
-for i in 0..<n {
-    var star = ""
-    
-    for _ in 0...i {
-        star += "*"
-    }
-    print(star)
+for i in 1...n {
+    print(String(repeating: "*", count: i))
 }
