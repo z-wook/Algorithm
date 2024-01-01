@@ -1,5 +1,4 @@
 let N = Int(readLine()!)!
-var input = readLine()!.split(separator: " ").map { Int($0)! }
-input.sort { $0 < $1 }
+let input = readLine()!.split(separator: " ").map { Int($0)! }
 
-print("\(input.first!) \(input.last!)")
+print("\(input.min()!) \(input.max()!)")
