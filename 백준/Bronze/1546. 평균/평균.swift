@@ -1,12 +1,8 @@
 import Foundation
 
-let count = Int(readLine()!)!
-let score = readLine()!.split(separator: " ").map { Int($0)! }
+let n = Double(readLine()!)!
+let score = readLine()!.split(separator: " ").map { Double($0)! }
 let m = score.max()!
-var sum: Double = 0
+let average = score.map { $0 / m * 100 }.reduce(0, +) / n
 
-score.forEach {
-    sum += Double($0) / Double(m) * 100
-}
-
-print(sum / Double(count))
+print(average)
