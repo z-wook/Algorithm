@@ -3,7 +3,7 @@ import Foundation
 func calcPerfectNumber(num: Int) {
     var list: [Int] = []
     
-    for i in 1..<num {
+    for i in 1...num / 2 { // 약수는 대칭을 이루기 때문에 2로 나눈 후 계산
         if num % i == 0 {
             list.append(i)
         }
