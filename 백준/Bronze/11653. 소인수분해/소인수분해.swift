@@ -1,20 +1,17 @@
 import Foundation
 
 var n = Int(readLine()!)!
-var primeNums: [Int] = []
+var num = 2
 
-while true {
-    if n < 2 { break }
-    
-    for i in 2...n {
-        if n % i == 0 {
-            n /= i
-            primeNums.append(i)
-            break
-        }
+while n > 1 {
+    if num * num > n {
+        print(n)
+        break
     }
-}
-
-primeNums.forEach {
-    print($0)
+    
+    while n % num == 0 {
+        n /= num
+        print(num)
+    }
+    num += 1
 }
